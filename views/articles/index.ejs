@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Towns</title>
+</head>
+<body>
+    <a href="/">Home</a> 
+    <h1>This is towns/index</h1>
+    <table id="list">
+        <thead>
+          <tr>
+            <th>Article</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% articles.forEach(function(t) { %>
+            <tr>
+              <td><%= t.article %></td>
+            </tr>
+            <% }); %>
+          </tbody>
+        </table>
+
+        <h2>New Article</h2>
+        <form id="add-review-form" method="POST" action="/articles">
+          <label>Article:</label>
+          <textarea name="article"></textarea>
+          <input type="submit" value="Add New Article">
+        </form>
+      </body>
+    </html>
+    
+</body>
+</html>
