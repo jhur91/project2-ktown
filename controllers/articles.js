@@ -2,8 +2,43 @@ const Article = require('../models/article');
 
 module.exports = {
     index,
-    create
+    create,
+    new: newArticle,
+    show,
+    delete: deleteArticle
 };
+
+function deleteArticle(req, res) {
+  // This responsible for deleting the article
+  Article.deleteOne({ _id: req.body.id }, function(err) {
+    if (!err) {
+            message.type = 'notification!';
+    }
+    else {
+            message.type = 'error';
+    }
+  });
+  res.redirect('/articles');
+}
+
+// function deleteArticle (req, res){
+//   Article.deleteOne({_id: req.body.id}, function(err, result){
+//     res.redirect('/articles');
+
+//   })
+// }
+
+
+function show(req, res) {
+  Article.findById(req.params.id, function(err, articles) {
+      res.render('articles/show', { articles });
+    });
+  };
+
+
+function newArticle(req, res) {
+  res.render('articles/new.ejs');
+}
 
 function index(req, res) {
     Article.find({}, function (err, articles) {
@@ -22,3 +57,4 @@ function create(req, res) {
         res.redirect(`/articles`);
     });
 }
+

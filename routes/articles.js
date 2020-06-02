@@ -4,6 +4,12 @@ const passport = require('passport');
 const articleCtrl = require('../controllers/articles');
 
 router.get('/', articleCtrl.index);
+router.get('/new', articleCtrl.new);
+router.get('/:id', articleCtrl.show);
 router.post('/', articleCtrl.create);
+router.delete('/:id', articleCtrl.delete);
+
+
+
 
 module.exports = router;

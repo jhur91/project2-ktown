@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+</head>
+
+<body>
+    <a href="/">Home</a>
+    <a href="/articles" class="brand-logo left">Koreatowns</a>
+
+    <h1>id show page</h1>
+
+ 
+    <section id="show-page">
+        <% articles.forEach(function(t) { %>
+
+        <div>Title: </div>
+        <div><%= t.title %></div>
+        <div>Article: </div>
+        <div><%= t.article %></div>
+        <% }); %>
+    </section>
+
+
+    <h2>New Comment</h2>
+    <form id="add-review-form" method="POST" action="/articles/<%= articles._id %>/comments">
+        <label>Comment:</label>
+        <textarea name="title"></textarea>
+
+        <input type="submit" value="Add New Article">
+    </form>
+
+
+
+       <!-- <div>
+    <%# article.forEach(function(t) { %>
+    <ul>
+        <li>
+            <a href="/articles/<%#= t.id %>"><%#= t.article %></a>
+        </li>
+    </ul>
+        <%# }); %>
+</div> -->
+</body>
+
+</html>

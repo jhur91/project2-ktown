@@ -4,31 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>All Towns</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
 </head>
 <body>
     <a href="/">Home</a> 
-    <h1>This is towns/index</h1>
-    <table id="list">
+    <a href="/articles/new" class="brand-logo left">Add New Town</a>
+
+    <h1>Check Out Koreatowns From All Over The World!</h1>
+    <!-- <table id="list">
         <thead>
           <tr>
             <th>Article</th>
           </tr>
         </thead>
         <tbody>
-          <% articles.forEach(function(t) { %>
+          <%# articles.forEach(function(t) { %>
             <tr>
-              <td><%= t.article %></td>
-            </tr>
-            <% }); %>
-          </tbody>
-        </table>
+              <td><%#= t.article %></td>
+              <td><a href="/articles/<%#= t._id %>">More Details...</a></td>
 
-        <h2>New Article</h2>
-        <form id="add-review-form" method="POST" action="/articles">
-          <label>Article:</label>
-          <textarea name="article"></textarea>
-          <input type="submit" value="Add New Article">
-        </form>
+            </tr>
+            <%# }); %>
+          </tbody>
+        </table> -->
+        
+        <ul>
+          <% articles.forEach(function(t) { %>
+            <li>
+              <form action="/articles/?_method=DELETE"
+                class="delete-form" method="DELETE">
+                <button type="submit">X</button>
+              </form>
+              <a href="/articles/<%= t.id %>"><%= t.title %></a>
+              <%= t.article %>
+            </li>
+          <% }); %>
+        </ul>
+        
       </body>
     </html>
     

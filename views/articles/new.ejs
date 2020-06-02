@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+
+</head>
+<body>
+    <a href="/">Home</a> 
+    <a href="/articles" class="brand-logo left">Koreatowns</a>
+
+    <h2>New Article</h2>
+    <form id="add-review-form" method="POST" action="/articles">
+      <label>Town Name:</label>
+      <textarea name="title"></textarea>
+      <label>Article:</label>
+      <textarea name="article"></textarea>
+
+      <input type="submit" value="Add New Article">
+    </form>
+</body>
+</html>
