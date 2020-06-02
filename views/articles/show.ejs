@@ -17,23 +17,21 @@
 
  
     <section id="show-page">
-        <% articles.forEach(function(t) { %>
 
         <div>Title: </div>
-        <div><%= t.title %></div>
+        <div><%= articles.title %></div>
         <div>Article: </div>
-        <div><%= t.article %></div>
-        <% }); %>
+        <div><%= articles.article %></div>
+        <h2>New Comment</h2>
+        <form id="add-review-form" method="POST" action="/articles/<%= articles._id %>/comments">
+            <label>Comment:</label>
+            <textarea name="title"></textarea>
+    
+            <input type="submit" value="Add New Article">
+        </form>
     </section>
 
 
-    <h2>New Comment</h2>
-    <form id="add-review-form" method="POST" action="/articles/<%= articles._id %>/comments">
-        <label>Comment:</label>
-        <textarea name="title"></textarea>
-
-        <input type="submit" value="Add New Article">
-    </form>
 
 
 

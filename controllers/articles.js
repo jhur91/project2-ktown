@@ -31,7 +31,8 @@ function deleteArticle(req, res) {
 
 function show(req, res) {
   Article.findById(req.params.id, function(err, articles) {
-      res.render('articles/show', { articles });
+    console.log(articles);  
+    res.render('articles/show', { articles });
     });
   };
 
