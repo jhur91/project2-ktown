@@ -32,8 +32,8 @@
         <ul>
           <% articles.forEach(function(t) { %>
             <li>
-              <form action="/articles/?_method=DELETE"
-                class="delete-form" method="DELETE">
+              <form action="/articles/<%= t._id %>?_method=DELETE"
+                class="delete-form" method="POST">
                 <button type="submit">X</button>
               </form>
               <a href="/articles/<%= t.id %>"><%= t.title %></a>

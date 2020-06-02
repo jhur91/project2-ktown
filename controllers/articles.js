@@ -9,25 +9,14 @@ module.exports = {
 };
 
 function deleteArticle(req, res) {
-  // This responsible for deleting the article
-  Article.deleteOne({ _id: req.body.id }, function(err) {
-    if (!err) {
-            message.type = 'notification!';
-    }
-    else {
-            message.type = 'error';
+  Article.findByIdAndRemove(req.params.id, function(err, result) {
+    if (err) {
+      res.send(err);
+    } else {
+      res.redirect('/articles');
     }
   });
-  res.redirect('/articles');
 }
-
-// function deleteArticle (req, res){
-//   Article.deleteOne({_id: req.body.id}, function(err, result){
-//     res.redirect('/articles');
-
-//   })
-// }
-
 
 function show(req, res) {
   Article.findById(req.params.id, function(err, articles) {
