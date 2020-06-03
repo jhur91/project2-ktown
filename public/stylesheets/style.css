@@ -6,6 +6,7 @@ body {
   grid-template-areas: 
     "nav"
     "main" */
+  background-color: tan;
 }
 
 body > a {

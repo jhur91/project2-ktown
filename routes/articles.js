@@ -9,7 +9,7 @@ router.get('/:id', articleCtrl.show);
 router.get('/:id/edit', articleCtrl.edit);
 router.post('/', articleCtrl.create);
 router.delete('/:id', articleCtrl.delete);
-
+router.put('/:id', articleCtrl.update);
 
 
 

@@ -11,8 +11,11 @@ module.exports = {
 };
 
 function update(req, res) {
-
+  Article.findByIdAndUpdate(req.params.id, req.body, function(err) {
+    res.redirect(`/articles/${req.params.id}`);
+  });
 }
+
 
 function edit(req, res) {
   Article.findById(req.params.id, function(err, articles) {
@@ -21,7 +24,7 @@ function edit(req, res) {
 }
 
 function deleteArticle(req, res) {
-  Article.findByIdAndRemove(req.params.id, function(err, result) {
+  Article.findByIdAndRemove(req.params.id, function(err) {
     if (err) {
       res.send(err);
     } else {
