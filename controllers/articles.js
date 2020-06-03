@@ -5,8 +5,20 @@ module.exports = {
     create,
     new: newArticle,
     show,
-    delete: deleteArticle
+    delete: deleteArticle,
+    edit,
+    update
 };
+
+function update(req, res) {
+
+}
+
+function edit(req, res) {
+  Article.findById(req.params.id, function(err, articles) {
+    res.render('articles/edit', { articles });
+});
+}
 
 function deleteArticle(req, res) {
   Article.findByIdAndRemove(req.params.id, function(err, result) {
