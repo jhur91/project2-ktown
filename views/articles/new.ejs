@@ -12,6 +12,9 @@
     <a href="/articles" class="brand-logo left">Koreatowns</a>
 
     <h2>New Article</h2>
+    <%# articles.user.forEach(function(student) { %>
+      <%# if (student._id.equals(user && user._id)) { %>
+
     <form id="add-review-form" method="POST" action="/articles">
       <label>Town Name:</label>
       <textarea name="title"></textarea>
@@ -20,5 +23,9 @@
 
       <input type="submit" value="Add New Article">
     </form>
+    <%# } %>
+    <%# }) %>
+
+
 </body>
 </html>
