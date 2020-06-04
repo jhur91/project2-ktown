@@ -1,45 +1,59 @@
 body {
     margin: 0;
-    /* height: 100vh; */
-    /* display: grid;
-    grid-template-rows: 50px 1fr;
-    grid-template-areas: 
-      "nav"
-      "main" */
     text-align: center;
-    background-color: black;
+    background-color: rgb(242, 245, 249);
     color: #00B7FF;
   }
 
 /* this section is the top bar */
-  body > a {
-    background-color: #B8C0C2;
+  div {
+    background-color: rgb(32, 74, 140);
     display: flex;
-    flex-direction: row;
-    padding: 0 20px 0 30px;
-    color: blue;
-    font-size: 20px;
+    justify-content: space-evenly;
+    padding: 20px;
+    font-size: 35px;
   }
 
-  ul {
-    border: solid red 10px;
-    background-color: red;
-  }
-
-  li {
-    font-size: 50px;
-    height: 100px;
+  div > a {
     display: flex;
-    flex-direction: row;
-    background-color: white;
-    border: solid black 1px;
+    justify-content: space-evenly;
+    color: rgb(242, 245, 249);
+    font-weight: bold;
   }
 
   a {
-    color: #00B7FF;
+    color: blue;
+}
+
+h1 {
+    font-size: 60px;
+    background-color: red;
+    color: black;
+  }
+  
+  h2 {
+    font-size: 40px;
+    text-decoration: underline;
+    color: black;
+  }
+  ul {
+    border: solid red 10px;
+    border-width: 20px 30px 20px 0;
+    background-color: red;
+    list-style-type: none;
   }
 
-  button {
-    color: red;
-    margin: 0 30px 30px 20px;
+  li {
+    display: flex;
+    font-size: 50px;
+    height: 200px;
+    background-color: white;
+    border: solid black 1px;
+    text-align: center;
+    padding: 20px;
   }
+  
+    button {
+      color: red;
+      margin: 0 20px 0 0;;
+    }

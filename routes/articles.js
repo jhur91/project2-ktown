@@ -4,10 +4,10 @@ const passport = require('passport');
 const articleCtrl = require('../controllers/articles');
 
 router.get('/', articleCtrl.index);
-router.get('/new', articleCtrl.new);
+router.get('/new', isLoggedIn, articleCtrl.new);
 router.get('/:id', articleCtrl.show);
 router.get('/:id/edit', isLoggedIn, articleCtrl.edit);
-router.post('/', isLoggedIn, articleCtrl.create);
+router.post('/', articleCtrl.create);
 router.delete('/:id', isLoggedIn, articleCtrl.delete);
 router.put('/:id', articleCtrl.update);
 

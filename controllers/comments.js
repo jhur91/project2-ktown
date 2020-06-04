@@ -19,6 +19,7 @@ function edit(req, res) {
 }
 
 function create(req, res) {
+  req.body.user = req.user;
     Article.findById(req.params.id, function(err, article) {
         article.comments.push(req.body);
         console.log(req.body);

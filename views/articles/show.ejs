@@ -20,7 +20,10 @@
         <div><%= articles.article %></div>
         <br>
         <br>
+        <% if (articles.user.equals(user && user._id)) { %>
         <a href="/articles/<%= articles._id %>/edit">Edit Article</a>
+        <% }; %>
+
         <br>
         <br>
         <h2>New Comment</h2>
@@ -40,30 +43,52 @@
     </section>
     <br>
     <br>
+
 <section id="comments-section">
     <% if (articles.comments.length) { %>
         <table>
+
           <thead>
             <tr>
+
               <th>Date</th>
               <th>Comment</th>
               <th>Interest</th>
+              <th></th>
+              <th></th>
+
             </tr>
+
           </thead>
+
           <tbody>
+
             <% let total = 0 %>
             <% articles.comments.forEach(function(c) { %>
                 <% total += c.rating %>
+
               <tr>
                 <td><%= c.createdAt.toLocaleDateString() %></td>
-                <td><%= c.content %>
-                <br>
-                <a href="/articles/<%= articles._id %>/comments/edit">Edit Comment</a>
-              </td>
-
+                <td><%= c.content %></td>
                 <td><%= c.rating %></td>
-              </tr>
+
+                <% if (c.user.equals(user && user._id)) { %>
+
+                  <!-- thisis the edit comment link -->
+                  <td><a href="/articles/<%= articles._id %>/comments/edit">Edit Comment</a></td>
+
+                  <!-- this is the comment delete button -->
+                  <td><form action="/articles/<%= user._id %>?_method=DELETE"
+                    class="delete-form" method="POST">
+                    <button type="submit">X</button>
+                  </form></td>
+
+                  <% }; %>
+             
+                </tr>
+
             <% }); %>
+
             <tr>
               <td colspan="2"></td>
               <td><strong><%= (total / articles.comments.length).toFixed(1) %></strong></td>
@@ -73,19 +98,10 @@
       <% } else { %>
         <h5>No Reviews Yet</h5>
       <% } %>
+  
+
 </section>
 
-
-
-       <!-- <div>
-    <%# article.forEach(function(t) { %>
-    <ul>
-        <li>
-            <a href="/articles/<%#= t.id %>"><%#= t.article %></a>
-        </li>
-    </ul>
-        <%# }); %>
-</div> -->
 </body>
 
 </html>
