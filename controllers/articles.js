@@ -1,4 +1,6 @@
 const Article = require('../models/article');
+const Student = require('../models/user');
+
 
 
 module.exports = {
@@ -36,11 +38,14 @@ function deleteArticle(req, res) {
 
 function show(req, res) {
 
+ 
   Article.findById(req.params.id, function(err, articles) {
-    console.log(articles);  
-    res.render('articles/show', { articles, user: req.user});
-    });
-  };
+    Student.findById(articles.user, function(err) {
+
+      res.render('articles/show', { articles, user: req.user});
+    })
+  });
+};
 
 
 function newArticle(req, res) {
@@ -48,10 +53,12 @@ function newArticle(req, res) {
   }
 
 function index(req, res) {
-  Article.find({}, function (err, articles) {
-    console.log(req.user);
-      res.render('articles/index', { articles, user: req.user });
-  });
+  Article.find({})
+  .populate('user')
+  .exec(function(err, articles) {
+    res.render('articles/index', { articles, user: req.user });
+
+  })
 }
 
 function create(req, res) {

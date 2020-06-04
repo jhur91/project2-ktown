@@ -7,12 +7,35 @@ body {
     grid-template-areas: 
       "nav"
       "main" */
-    background-color: tan;
-  }
-  #article-title {
-      font-size: 30px;
+    background-color: rgb(242, 245, 249);
   }
 
+  #top-bar {
+    background-color: rgb(32, 74, 140);
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+    font-size: 35px;
+  }
+
+  #top-bar > a {
+    display: flex;
+    justify-content: space-evenly;
+    color: rgb(242, 245, 249);
+    font-weight: bold;
+  }
+
+  #article-title {
+      font-size: 50px;
+      text-decoration: underline;
+  }
+
+  #article-article {
+      background-color: rgb(242, 245, 249);
+      border: solid red 10px;
+      font-size: 25px;
+
+  }
   
 
   body > a {

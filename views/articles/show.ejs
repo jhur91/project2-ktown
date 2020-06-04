@@ -10,14 +10,15 @@
 </head>
 
 <body>
+  <div id="top-bar">
     <a href="/">Home</a>
     <a href="/articles" class="brand-logo left">Koreatowns</a>
-
+  </div>
  
     <section id="show-page">
 
         <div id="article-title"><%= articles.title %></div>
-        <div><%= articles.article %></div>
+        <div id="article-article"><%= articles.article %></div>
         <br>
         <br>
         <% if (articles.user.equals(user && user._id)) { %>
@@ -51,10 +52,10 @@
           <thead>
             <tr>
 
+              <th></th>
               <th>Date</th>
               <th>Comment</th>
               <th>Interest</th>
-              <th></th>
               <th></th>
 
             </tr>
@@ -68,6 +69,7 @@
                 <% total += c.rating %>
 
               <tr>
+                <td></td>
                 <td><%= c.createdAt.toLocaleDateString() %></td>
                 <td><%= c.content %></td>
                 <td><%= c.rating %></td>
@@ -75,11 +77,17 @@
                 <% if (c.user.equals(user && user._id)) { %>
 
                   <!-- thisis the edit comment link -->
-                  <td><a href="/articles/<%= articles._id %>/comments/edit">Edit Comment</a></td>
+                  <td>Edit Comment:
+                  <form action="/comments/<%= c._id %>?_method=PUT" method="POST">
+                      <!-- Value attribute is being set to the comment's current text -->
+                      <textarea name="content"><%= c.content %></textarea>
+                    <br>
+                      <!-- <input name="text" value="<%#= articles.comments.text %>"> -->
+                      <button type="submit">UPDATE COMMENT</button>
+                    </form></td>
 
                   <!-- this is the comment delete button -->
-                  <td><form action="/articles/<%= user._id %>?_method=DELETE"
-                    class="delete-form" method="POST">
+                  <td>Delete Comment:<form action="/comments/<%= c._id %>?_method=DELETE" class="delete-form" method="POST">
                     <button type="submit">X</button>
                   </form></td>
 

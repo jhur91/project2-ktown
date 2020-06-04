@@ -1,51 +1,62 @@
 body {
   margin: 0;
-  /* height: 100vh; */
-  /* display: grid;
-  grid-template-rows: 50px 1fr;
-  grid-template-areas: 
-    "nav"
-    "main" */
   text-align: center;
-  background-color: tan;
+  background-color: rgb(242, 245, 249);
+  color: #00B7FF;
 }
 
-body > a {
-  background-color: #B8C0C2;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 0 20px 0 30px;
-}
-
-
-body > main {
-  grid-area: main;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  background-color: #E8ECEB;
+/* this section is the top bar */
+div {
+text-align: center;  
+  background-color: rgb(32, 74, 40);
   padding: 20px;
-  overflow-y: scroll;
+  font-size: 35px;
 }
 
+div > a {
+  font-weight: bold;
+}
+
+.brand-logo {
+  background-color: red;
+  color: blue;
+}
+
+
+a {
+  color: rgb(242, 245, 249);
+}
+
+h1 {
+  font-size: 60px;
+  background-color: red;
+  color: black;
+}
+
+h2 {
+  font-size: 40px;
+  text-decoration: underline;
+  color: black;
+}
 ul {
-  
-  border: solid gray 10px;
+  border: solid red 10px;
+  border-width: 20px 30px 20px 0;
+  background-color: red;
+  list-style-type: none;
 }
 
 li {
   display: flex;
-  flex-direction: row;
-  background-color: white;
+  font-size: 50px;
+  height: 200px;
+  background-color: blue;
+  color: rgb(242, 245, 249);
   border: solid black 1px;
+  text-align: center;
+  padding: 20px;
 }
 
-a {
-  color: #00B7FF;
-}
-
-button {
-  color: red;
-}
+  button {
+    color: red;
+    margin: 0 20px 0 0;;
+  }

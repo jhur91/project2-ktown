@@ -10,7 +10,7 @@
 <body>
     <a href="/">Home</a>
     <a href="/articles" class="brand-logo left">Koreatowns</a>
-    
+
     <h1>Edit Article</h1>
     <form action="/articles/<%= articles.id %>?_method=PUT" method="POST" autocomplete="off">
       <textarea name="article"><%= articles.article %></textarea>
