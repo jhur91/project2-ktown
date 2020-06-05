@@ -2,14 +2,13 @@ body {
   margin: 0;
   text-align: center;
   background-color: rgb(242, 245, 249);
-  color: #00B7FF;
 }
 
 /* this section is the top bar */
 div {
 text-align: center;  
-  background-color: rgb(32, 74, 40);
-  padding: 20px;
+background-color: rgb(32, 74, 140);
+padding: 20px;
   font-size: 35px;
 }
 
@@ -19,12 +18,11 @@ div > a {
 
 .brand-logo {
   background-color: red;
-  color: blue;
 }
 
 
 a {
-  color: rgb(242, 245, 249);
+  color: black;
 }
 
 h1 {
@@ -49,8 +47,7 @@ li {
   display: flex;
   font-size: 50px;
   height: 200px;
-  background-color: blue;
-  color: rgb(242, 245, 249);
+  background-color:rgb(242, 245, 249);
   border: solid black 1px;
   text-align: center;
   padding: 20px;
@@ -59,4 +56,13 @@ li {
   button {
     color: red;
     margin: 0 20px 0 0;;
+  }
+
+  img {
+    height: 100%;
+    width: 100%;
+  }
+  footer {
+    background-color: green;
+    height: 20px;
   }
