@@ -2,7 +2,6 @@ const Article = require('../models/article');
 
 module.exports = {
     create,
-    edit,
     update,
     delete: deleteComment
 };
@@ -24,11 +23,6 @@ function deleteComment(req, res) {
   });
 }
 
-function update(req, res) {
-  Article.findByIdAndUpdate(req.params.id, req.body, function(err) {
-    res.redirect(`/articles/${req.params.id}`);
-  });
-}
 
 
 function update(req, res) {
@@ -49,15 +43,6 @@ function update(req, res) {
   });
 }
 
-function edit(req, res) {
-  let user = null;
-  if(req.user) {
-    user = req.user;
-  }
-  Article.findById(req.params.id, function(err, post) {
-    res.render('articles/edit', {post, user});
-  })
-}
 
 function create(req, res) {
   req.body.user = req.user;

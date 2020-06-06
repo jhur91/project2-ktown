@@ -1,5 +1,5 @@
 const Article = require('../models/article');
-const Student = require('../models/user');
+const User = require('../models/user');
 
 
 
@@ -38,11 +38,10 @@ function deleteArticle(req, res) {
 
 function show(req, res) {
 
- 
   Article.findById(req.params.id, function(err, articles) {
-    Student.findById(articles.user, function(err) {
+    User.findById(articles.user, function(err, articleUser) {
 
-      res.render('articles/show', { articles, user: req.user});
+      res.render('articles/show', { articles, user: req.user, articleUser});
     })
   });
 };
@@ -54,7 +53,7 @@ function newArticle(req, res) {
 
 function index(req, res) {
   Article.find({})
-  .populate('user')
+  .populate('User')
   .exec(function(err, articles) {
     res.render('articles/index', { articles, user: req.user });
 

@@ -1,4 +1,4 @@
-const Student = require('../models/user');
+const User = require('../models/user');
 
 module.exports = {
   index
@@ -11,12 +11,12 @@ function index(req, res, next) {
   let modelQuery = req.query.name ? {name: new RegExp(req.query.name, 'i')} : {};
   // Default to sorting by name
   let sortKey = req.query.sort || 'name';
-  Student.find(modelQuery)
-  .sort(sortKey).exec(function(err, students) {
+  User.find(modelQuery)
+  .sort(sortKey).exec(function(err, users) {
     if (err) return next(err);
     // Passing search values, name & sortKey, for use in the EJS
     res.render('index', {
-      students, 
+      users, 
       name: req.query.name, 
       sortKey,
       user: req.user 

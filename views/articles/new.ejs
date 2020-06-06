@@ -4,13 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add New</title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel='stylesheet' href='/stylesheets/new.css' />
 
 </head>
 <body>
+  <div>
     <a href="/">Home</a> 
     <a href="/articles" class="brand-logo left">Koreatowns</a>
-
+  </div>
     <h2>New Article</h2>
     <%# articles.user.forEach(function(student) { %>
       <%# if (student._id.equals(user && user._id)) { %>
@@ -18,8 +19,11 @@
     <form id="add-review-form" method="POST" action="/articles">
       <label>Town Name:</label>
       <textarea name="title"></textarea>
+      <label>Image Url:</label>
+      <textarea name="image"></textarea>
       <label>Article:</label>
       <textarea name="article"></textarea>
+
 
       <input type="submit" value="Add New Article">
     </form>

@@ -1,12 +1,6 @@
 body {
     margin: 0;
     text-align: center;
-    /* height: 100vh; */
-    /* display: grid;
-    grid-template-rows: 50px 1fr;
-    grid-template-areas: 
-      "nav"
-      "main" */
     background-color: rgb(242, 245, 249);
   }
 
@@ -25,6 +19,10 @@ body {
     font-weight: bold;
   }
 
+  #article-image {
+    height: 100%;
+    width: 100%;
+  }
   #article-title {
       font-size: 50px;
       text-decoration: underline;
@@ -74,7 +72,7 @@ body {
     color: #00B7FF;
   }
   
-  button {
+  #delete-button {
     color: red;
   }
   

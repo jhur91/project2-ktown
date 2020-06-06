@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const commentsCtrl = require('../controllers/comments');
 
-router.get('/comments/:id/edit', commentsCtrl.edit);
+// router.get('/comments/:id/edit', commentsCtrl.edit);
 router.post('/articles/:id/comments', isLoggedIn, commentsCtrl.create);
 router.put('/comments/:id', commentsCtrl.update);
 router.delete('/comments/:id', commentsCtrl.delete);
