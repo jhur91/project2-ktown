@@ -19,7 +19,6 @@
 ### Follow the following link to read about your favorite KoreaTown
 [Ktown Finder](https://project2-ktown.herokuapp.com/)
 
-You may begin playing as soon as the page appears. To play again or start over, click the "reset" button.
 
 # Next Steps
 ### Moving forward, I plan on improving the styling and user interface.  In terms of features, I would like to create a user profile page, with their user names as links to this page from the articles and comments.  In general, I would like to improve the user interface to be consistent with apps we use on a daily basis.
