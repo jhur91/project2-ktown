@@ -1,17 +1,19 @@
 # Ktown Finder
-### This is a game in which you need to identify the secret word. You will check to see which letters fill in the blanks until you fill them all up to fully reveal the secret word.  You may make up to 6 incorrect guesses. Upon the 6th incorrect guess, the game will end and you will have lost. If you correctly identify the secret word without using up the incorrect guesses, you will have won.  The number of incorrect guesses are represented by a body piece to our hangman, a person-like figure that will develop as incorrect guesses are played. When all incorrect guesses have been used, the hangman will have all parts to its body.
+### This is a web app that allows users to post articles about Korean communities from all around the world.  It is a commonly used phrase in the Korean community, "you can find Koreans anywhere." From this idea, this app will help users learn about Korean communities from a user-to-user perspective. You may log in with your google account and add articles or comments.  If you would like to just read, then you do not need to log in.  Some features that users get are the adding, editing, and deleting of their own articles and comments!
 
 
-![Hangman Game](https://i.imgur.com/XJscA9J.png "Project 1: Hangman Game")
+![Home Screen](https://i.imgur.com/Z7ZQZ7E.png "Home Screen")
 
-![Hangman Game](https://i.imgur.com/OJLIUsM.png "Winner Screenshot")
+![Article Index](https://i.imgur.com/0aUi9kJ.png "Article Index")
 
-![Hangman Game](https://i.imgur.com/BIoUwsg.png "Loser Screenshot")
+![New Article](https://i.imgur.com/G0x4pDx.png "New Article")
+
+![Article Show](https://i.imgur.com/q7gyX3N.jpg "Article Show")
 
 
 
 # Technologies Used
-### HTML, CSS, Javascript
+### HTML, CSS, Javascript, Node.js, Mongoose, MongoDB
 
 # Getting Started
 ### Follow the following link to read about your favorite KoreaTown
@@ -20,5 +22,5 @@
 You may begin playing as soon as the page appears. To play again or start over, click the "reset" button.
 
 # Next Steps
-### Moving forward, I plan on adding categories to choose from, such as "sports" or "foods" so that users can have a choice for what type of words they want to play with.  I also plan on adding music and improving the css so that the hangman looks more humanlike.  
+### Moving forward, I plan on improving the styling and user interface.  In terms of features, I would like to create a user profile page, with their user names as links to this page from the articles and comments.  In general, I would like to improve the user interface to be consistent with apps we use on a daily basis.
 
