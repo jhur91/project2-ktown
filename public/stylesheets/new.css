@@ -33,6 +33,7 @@ h1 {
   
   h2 {
     font-size: 40px;
+    background-color: red;
     text-decoration: underline;
     color: black;
   }
