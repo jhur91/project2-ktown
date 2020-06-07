@@ -57,7 +57,7 @@
       <thead>
         <tr>
 
-          <th></th>
+          <th>Name</th>
           <th>Date</th>
           <th>Comment</th>
           <th>Interest</th>
@@ -74,8 +74,9 @@
         <% total += c.rating %>
 
         <tr>
-         
-          <td></td>
+
+          
+          <td><span class="student-name"><%= user.name %></span></td>
           <td><%= c.createdAt.toLocaleDateString() %></td>
           <td><%= c.content %></td>
           <td><%= c.rating %></td>
