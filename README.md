@@ -3,12 +3,13 @@
 
 
 ![Home Screen](https://i.imgur.com/Z7ZQZ7E.png "Home Screen")
-
+---
 ![Article Index](https://i.imgur.com/0aUi9kJ.png "Article Index")
-
+---
 ![New Article](https://i.imgur.com/G0x4pDx.png "New Article")
-
+---
 ![Article Show](https://i.imgur.com/q7gyX3N.jpg "Article Show")
+---
 
 
 
