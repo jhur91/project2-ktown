@@ -1,13 +1,13 @@
 body {
     margin: 0;
     text-align: center;
-    background-color: rgb(242, 245, 249);
+    background-color: black;
     color: #00B7FF;
   }
 
 /* this section is the top bar */
   div {
-    background-color: rgb(32, 74, 140);
+    background-image: linear-gradient(to bottom right, red, blue);
     display: flex;
     justify-content: space-evenly;
     padding: 20px;
@@ -39,7 +39,7 @@ h1 {
   ul {
     border: solid red 10px;
     border-width: 20px 30px 20px 0;
-    background-color: red;
+    background-image: linear-gradient(to bottom right, blue, red);
     list-style-type: none;
   }
 
@@ -63,3 +63,5 @@ h1 {
       color: red;
       margin: 0 20px 0 0;;
     }
+
+    

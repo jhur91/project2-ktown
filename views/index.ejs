@@ -1,49 +1,17 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<%- include('./partials/header') %>
 
-  </head>
-  <body>
-
-    <div class="navbar-fixed">
-      <nav>
-        <div class="nav-wrapper">
-          <a href="/articles" class="brand-logo left">
-            
-            Koreatowns
-
-            <i class="material-icons left">arrow_forward</i>
-            
-          </a>
-          <!-- Add login UI here -->
-          <ul class="right">
-            <li>
-            <% if (user) { %>
-              <a href="/logout">
-                <i class="material-icons left">trending_flat</i>
-                Log Out</a>
-            <% } else { %>
-              <a href="/auth/google">
-                <i class="material-icons left">vpn_key</i>
-                Login with Google</a>
-            <% } %>
-            </li>
-          </ul>
-        </div>
-      </nav>
+   <div class="welcome">
+      <h4>Welcome to KoreaTown Finder!</h4>
+      <p>
+        There is a common saying amongst traveling Koreans, "Wow! you can find Koreans anywhere!" 
+        After hearing this phrase growing up and witnessing this for myself throughout my travels, 
+        I developed a strong curiousity about K-Towns around the world! With a global effort, 
+        I hope that we can all share our local KoreaTowns and experience how differnt AND similar we can be!
+      </p>
     </div>
 
+    <div class="koreanFlag">
+      <img src="https://i.imgur.com/cqctB3H.png" alt="South Korean Flag" />
+    </div>
   </body>
-  <div>
-  <img src="https://i.imgur.com/cqctB3H.png" alt="South Korean Flag">
-  </div>
-  <footer></footer>
-
-  </html>    
-
-    
+</html>

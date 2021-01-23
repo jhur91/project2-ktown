@@ -1,15 +1,107 @@
 body {
-  margin: 0;
+  background-color: black;
+  /* margin: 0;
   text-align: center;
-  background-color: rgb(242, 245, 249);
+  background:-webkit-linear-gradient(180deg,white 33%,blue 33%) */
 }
 
-/* this section is the top bar */
-div {
+.navbar-fixed {
+  background-image: linear-gradient(to bottom right, red, blue);
+  height: 13vh;
+  width: 100%;
+  margin: 0;
+}
+
+.nav-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 10px 25px;
+}
+
+.login {
+}
+
+a {
+  color: black;
+}
+
+.second-nav {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+
+.second-nav > a {
+  color: white;
+  padding: 0 25px;
+}
+
+.welcome {
+  color: white;
+  border: 1px solid white;
+  background-image: linear-gradient(to bottom right, red, blue);
+  margin: 0 0 20px 0;
+}
+
+img {
+  height: 75%;
+  width: 75%;
+}
+
+.indexBody {
+  background-color: white;
+}
+
+.indexTitle {
+  text-align: center;
+}
+
+.articleList {
+  list-style-type: none;
+}
+
+.listItem {
+  border: black 1px solid;
+}
+
+.articleLink {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 50px;
+  height: 200px;
+  background-color: white;
+  border: solid black 1px;
+  text-align: center;
+  padding: 20px;
+}
+
+.listImage {
+  height: 100%;
+  width: 50%;
+}
+
+.koreanFlag {
+  text-align: center;
+}
+
+/* div {
+display: flex;
+flex-direction: row;
+justify-content: space-around;
 text-align: center;  
 background-color: rgb(32, 74, 140);
 padding: 20px;
-  font-size: 35px;
+font-size: 35px;
+}
+
+header {
+  height: 1000px;
+}
+
+.nav-wrapper {
+  display: flex;
+  flex-direction: row;
 }
 
 div > a {
@@ -38,24 +130,19 @@ h2 {
 }
 ul {
   border: solid red 10px;
-  border-width: 20px 30px 20px 0;
   background-color: red;
   list-style-type: none;
 }
 
 li {
-  display: flex;
   font-size: 50px;
-  height: 200px;
   background-color:rgb(242, 245, 249);
   border: solid black 1px;
   text-align: center;
-  padding: 20px;
 }
 
   button {
     color: red;
-    margin: 0 20px 0 0;;
   }
 
   img {
@@ -64,4 +151,4 @@ li {
   }
   footer {
     height: 20px;
-  }
+  } */

@@ -1,23 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Towns</title>
-    <link rel='stylesheet' href='/stylesheets/index.css' />
+<%- include('../partials/header') %>
 
-</head>
-<body>
-  <div>
-    <a href="/">Home</a> 
-    <a href="/articles/new" class="brand-logo left">Add New Town</a>
+<body class="indexBody">
+  <div class="indexTitle">
+    <h1>Koreatown:</h1>
+    <h2>From All-Around The World!</h2>
   </div>
-  <h1>Koreatown:</h1>
-  <h2>From All-Around The World!</h2>
-   
-    <ul>
+    <ul class="articleList">
       <% articles.forEach(function(t) { %>
-        <li>
+        <li class="listItem">
           <% if (t.user.equals(user && user._id)) { %>
 
             <form action="/articles/<%= t._id %>?_method=DELETE"
@@ -25,9 +15,10 @@
               <button type="submit">X</button>
             </form>
           <% } %>
-          <a href="/articles/<%= t.id %>"><%= t.title %></a>
-          <img src="https://i.imgur.com/3H9xUt5.png" alt="Korea Town Logo">
-          
+          <div class="articleLink">
+          <a href="/articles/<%= t.id %>" ><%= t.title %></a>
+          <img  class="listImage" src="<%= t.image %>" alt="Korea Town Logo">
+        </div>
         </li>
       <% }); %>
     </ul>

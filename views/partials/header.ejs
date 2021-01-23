@@ -1,9 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="stylesheets/style.css" />
-    <a href="/">HOME</a>
-</head>
+<html>
+  <head>
+    <title>K-Town Finder</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </head>
+
+  <body>
+    <div class="navbar-fixed">
+      <div class="nav-wrapper">
+        <div class="ktown-logo">
+          <a href="/articles">
+            <h1>Koreatowns<i class="material-icons">arrow_forward</i></h1>
+          </a>
+        </div>
+        <div class="login">
+          <% if (user) { %>
+          <a href="/logout">
+            <h1><i class="material-icons">trending_flat</i> Log Out</h1></a
+          >
+          <% } else { %>
+          <a href="/auth/google">
+            <h1><i class="material-icons right-align">vpn_key</i> Login</h1>
+          </a>
+          <% } %>
+        </div>
+      </div>
+    </div>
+
+    <div class="second-nav">
+      <a href="/"><p>Home</p></a>
+      <a href="/articles"><p>Koreatowns</p></a>
+      <a href="/articles/new" class="brand-logo left"><p>Add New Town</p></a>
+    </div>
+  </body>
+</html>
