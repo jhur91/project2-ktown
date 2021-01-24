@@ -1,19 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add New</title>
-    <link rel='stylesheet' href='/stylesheets/new.css' />
-
-</head>
-<body>
-  <div>
-    <a href="/">Home</a> 
-    <a href="/articles" class="brand-logo left">Koreatowns</a>
-  </div>
+    <link rel="stylesheet" href="/stylesheets/new.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="/">Home</a>
+      <a href="/articles" class="brand-logo left">Koreatowns</a>
+    </div>
     <h2>New Article</h2>
-   
 
     <form id="add-review-form" method="POST" action="/articles">
       <label>Town Name:</label>
@@ -23,11 +21,7 @@
       <label>Article:</label>
       <textarea name="article"></textarea>
 
-
-      <input type="submit" value="Add New Article">
+      <input type="submit" value="Add New Article" />
     </form>
-   
-
-
-</body>
+  </body>
 </html>

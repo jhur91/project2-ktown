@@ -85,6 +85,43 @@ img {
   text-align: center;
 }
 
+.showBody {
+  margin: 0;
+  text-align: center;
+  background-color: rgb(242, 245, 249);
+}
+
+#article-image {
+  height: 100%;
+  width: 100%;
+}
+#article-title {
+  font-size: 50px;
+  text-decoration: underline;
+}
+
+#article-article {
+  background-color: rgb(242, 245, 249);
+  border: solid red 10px;
+  font-size: 25px;
+}
+
+#show-page > a {
+  color: #00b7ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px 0 30px;
+}
+
+#comments-section {
+  display: flex;
+  justify-content: center;
+}
+
+#delete-button {
+  color: red;
+}
 /* div {
 display: flex;
 flex-direction: row;

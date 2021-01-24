@@ -1,66 +1,60 @@
 body {
-    margin: 0;
-    text-align: center;
-    background-color: rgb(242, 245, 249);
-    color: black;
-  }
-
-/* this section is the top bar */
-  div {
-    background-color: rgb(32, 74, 140);
-    display: flex;
-    justify-content: space-evenly;
-    padding: 20px;
-    font-size: 35px;
-  }
-
-  div > a {
-    display: flex;
-    justify-content: space-evenly;
-    color: rgb(242, 245, 249);
-    font-weight: bold;
-  }
-
-  a {
-    color: blue;
+  margin: 0;
+  text-align: center;
+  background-color: rgb(242, 245, 249);
+  color: black;
 }
 
-h1 {
-    font-size: 60px;
-    background-color: red;
-    color: black;
-  }
-  
-  h2 {
-    font-size: 40px;
-    background-color: red;
-    text-decoration: underline;
-    color: black;
-  }
-  ul {
-    border: solid red 10px;
-    border-width: 20px 30px 20px 0;
-    background-color: red;
-    list-style-type: none;
-  }
+/* this section is the top bar */
+div {
+  background-image: linear-gradient(to bottom right, red, blue);
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+  font-size: 35px;
+}
 
-  li {
-    display: flex;
-    justify-content: space-evenly;
-    font-size: 50px;
-    height: 200px;
-    background-color: white;
-    border: solid black 1px;
-    text-align: center;
-    padding: 20px;
-  }
+div > a {
+  display: flex;
+  justify-content: space-evenly;
+  color: rgb(242, 245, 249);
+  font-weight: bold;
+}
 
-  img {
-    height: 50%;
-    width: 50%;
-  }
-  
-    button {
-      color: red;
-      margin: 0 20px 0 0;;
-    }
+a {
+  color: blue;
+}
+
+h2 {
+  font-size: 40px;
+  background-color: rgb(242, 245, 249);
+  text-decoration: underline;
+  color: black;
+}
+ul {
+  border: solid red 10px;
+  border-width: 20px 30px 20px 0;
+  background-color: red;
+  list-style-type: none;
+}
+
+li {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 50px;
+  height: 200px;
+  background-color: white;
+  border: solid black 1px;
+  text-align: center;
+  padding: 20px;
+}
+
+img {
+  height: 50%;
+  width: 50%;
+}
+
+button {
+  color: red;
+  margin: 0 20px 0 0;
+}
